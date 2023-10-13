@@ -24,10 +24,10 @@ app.post('/', upload.none(), async (req, res) => {
   const link = req.body.link;
 
   console.log(`Title: ${title}`);
-  console.log(`Description: ${descr}`);
+  // console.log(`Description: ${descr}`);
   console.log(`Link: ${link}`);
 
-  const content = `${descr}\n${link}`;
+  const content = `${link}`;
   await sendLark(title, content);
 
   res.send('Post received!');
